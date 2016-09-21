@@ -1,84 +1,67 @@
 #include "Contact.class.hpp"
 #include <iostream>
 
-Contact::Contact(void) { }
-
-Contact::~Contact(void) { }
-
-
-void Contact::SetFirstName(std::string firstName)
-{
-    if (this->_firstName == NULL) {
-        this->_firstName = firstName;
-    }
+Contact::Contact(void) {
+    Contact::_nbInstance += 1;
+    this->_id = Contact::_nbInstance;
+    return;
 }
 
-void Contact::SetLastName(std::string lastName)
-{
-    if (this->-_lastName == NULL) {
-        this->_lastName = lastName;
-    }
+Contact::~Contact(void) {
+    Contact::_nbInstance -= 1;
+    return;
 }
 
-void Contact::SetNickName(std::string nickName)
+void Contact::Add(void)
 {
-    if (this->_nickName == NULL) {
-        this->_nickName = nickName;
-    }
+    std::cout << "First name : ";
+    std::cin >> this->_firstName;
+
+    std::cout << "Last name : ";
+    std::cin >> this->_lastName;
+
+    std::cout << "Nickname : ";
+    std::cin >> this->_nickName;
+
+    std::cout << "Login : ";
+    std::cin >> this->_login;
+
+    std::cout << "Postal address : ";
+    std::cin >> this->_postalAddress;
+
+    std::cout << "Email address : ";
+    std::cin >> this->_emailAddress;
+
+    std::cout << "Phone number : ";
+    std::cin >> this->_phoneNumber;
+
+    std::cout << "Birthday date : ";
+    std::cin >> this->_birthdayDate;
+
+    std::cout << "Favorite meal : ";
+    std::cin >> this->_favoriteMeal;
+
+    std::cout << "Underwear color : ";
+    std::cin >> this->_underwearColor;
+
+    std::cout << "Darkest secret : ";
+    std::cin >> this->_darkestSecret;
+
+    std::cout << "Contact '" << this->_login << "' added" << std::endl;
 }
 
-void Contact::SetLogin(std::string login)
+void Contact::Print(void)
 {
-    if (this->_login == NULL) {
-        this->_login = login;
-    }
+    std::cout << "Index : " << this->_id;
+    std::cout << " First name : " << this->_firstName;
+    std::cout << " Last name : " << this->_lastName;
+    std::cout << " Nickname : " << this->_nickName;
+    std::cout << std::endl;
 }
 
-void Contact::SetPostalAddress(std::string postalAddress)
+int Contact::getNbInstance(void)
 {
-    if (this->_postalAddress == NULL) {
-        this->_postalAddress = postalAddress;
-    }
+    return Contact::_nbInstance;
 }
 
-void Contact::SetEmailAddress(std::string emailAddress)
-{
-    if (this->_emailAddress == NULL) {
-        this->_emailAddress = emailAddress;
-    }
-}
-
-void Contact::SetPhoneNumber(std::string phoneNumber)
-{
-    if (this->_phoneNumber == NULL) {
-        this->_phoneNumber = phoneNumber;
-    }
-}
-
-void Contact::SetBirthdayDate(std::string birthdayDate)
-{
-    if (this->_birthdayDate == NULL) {
-        this->_birthdayDate = birthdayDate;
-    }
-}
-
-void Contact::SetFavoriteMeal(std::string favoriteMeal)
-{
-    if (this->_favoriteMeal == NULL) {
-        this->_favoriteMeal = favoriteMeal;
-    }
-}
-
-void Contact::SetUnderwearColor(std::string underwearColor)
-{
-    if (this->_underwearColor == NULL) {
-        this->_underwearColor = underwearColor;
-    }
-}
-
-void Contact::SetDarkestSecret(std::string darkestSecret)
-{
-    if (this->_darkestSecret == NULL) {
-        this->_darkestSecret = darkestSecret;
-    }
-}
+int Contact::_nbInstance = 0;

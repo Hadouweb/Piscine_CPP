@@ -10,17 +10,10 @@ public:
     Contact(void);
     ~Contact(void);
 
-    void SetFirstName(std::string firstName);
-    void SetLastName(std::string lastName);
-    void SetNickName(std::string nickName);
-    void SetLogin(std::string login);
-    void SetPostalAddress(std::string postalAdress);
-    void SetEmailAddress(std::string emailAddress);
-    void SetPhoneNumber(std::string phoneNumber);
-    void SetBirthdayDate(std::string birthdayDate);
-    void SetFavoriteMeal(std::string favoriteMeal);
-    void SetUnderwearColor(std::string underwearColor);
-    void SetDarkestSecret(std::string darkestSecret);
+    void Add(void);
+    void Print(void);
+
+    static int getNbInstance(void);
 
 private:
 
@@ -35,6 +28,9 @@ private:
     std::string _favoriteMeal;
     std::string _underwearColor;
     std::string _darkestSecret;
+
+    static int _nbInstance;
+    int _id;
 
 };
 
