@@ -12,6 +12,7 @@ public:
 
     void Add(void);
     void Print(void) const;
+
 	static std::string Truncate(std::string s)
 	{
 		std::string str;

@@ -49,13 +49,6 @@ void Contact::Add(void)
     std::cout << "Contact '" << this->_login << "' added" << std::endl;
 }
 
-/*
- * 		std::cout << std::left << "Index : " << std::right << this->_id << " | ";
-		std::cout << std::left << "First name : " << std::left << this->_firstName << " | ";
-		std::cout << std::left << "Last name : " << std::left << this->_lastName << " | ";
-		std::cout << std::left << "Nickname : " << std::left << this->_nickName;
- */
-
 void Contact::Print(void) const
 {
 	if (!this->_firstName.empty() &&
