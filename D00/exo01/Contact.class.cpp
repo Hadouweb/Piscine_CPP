@@ -1,5 +1,4 @@
 #include "Contact.class.hpp"
-#include <iostream>
 
 Contact::Contact(void) {
     Contact::_nbInstance += 1;
@@ -50,13 +49,25 @@ void Contact::Add(void)
     std::cout << "Contact '" << this->_login << "' added" << std::endl;
 }
 
-void Contact::Print(void)
+/*
+ * 		std::cout << std::left << "Index : " << std::right << this->_id << " | ";
+		std::cout << std::left << "First name : " << std::left << this->_firstName << " | ";
+		std::cout << std::left << "Last name : " << std::left << this->_lastName << " | ";
+		std::cout << std::left << "Nickname : " << std::left << this->_nickName;
+ */
+
+void Contact::Print(void) const
 {
-    std::cout << "Index : " << this->_id;
-    std::cout << " First name : " << this->_firstName;
-    std::cout << " Last name : " << this->_lastName;
-    std::cout << " Nickname : " << this->_nickName;
-    std::cout << std::endl;
+	if (!this->_firstName.empty() &&
+		!this->_lastName.empty() &&
+		!this->_nickName.empty())
+	{
+		std::cout.width(10); std::cout << std::right << this->_id << " | ";
+		std::cout.width(10); std::cout << std::right << Contact::Truncate(this->_firstName) << " | ";
+		std::cout.width(10); std::cout << std::right << Contact::Truncate(this->_lastName) << " | ";
+		std::cout.width(10); std::cout << std::right << Contact::Truncate(this->_nickName);
+		std::cout << std::endl;
+	}
 }
 
 int Contact::getNbInstance(void)

@@ -11,7 +11,18 @@ public:
     ~Contact(void);
 
     void Add(void);
-    void Print(void);
+    void Print(void) const;
+	static std::string Truncate(std::string s)
+	{
+		std::string str;
+
+		str = s;
+		if (s.length() >= 10) {
+			str[9] = '.';
+			str.resize(10);
+		}
+		return str;
+	}
 
     static int getNbInstance(void);
 
