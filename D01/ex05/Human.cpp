@@ -8,7 +8,7 @@ Human::~Human(void) {
 
 }
 
-const Brain Human::getBrain() const {
+const Brain& Human::getBrain() const {
 	return this->_br;
 }
 

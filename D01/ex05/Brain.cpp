@@ -13,6 +13,6 @@ Brain::~Brain(void) {
 
 }
 
-std::string Brain::identify(void) const {`
+std::string Brain::identify(void) const {
 	return this->_id;
 }

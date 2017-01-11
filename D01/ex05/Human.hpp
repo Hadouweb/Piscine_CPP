@@ -7,7 +7,7 @@ class Human {
 public:
 	Human(void);
 	~Human(void);
-	const Brain getBrain(void) const;
+	const Brain& getBrain(void) const;
 	std::string identify(void) const;
 
 private:

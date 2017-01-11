@@ -6,15 +6,14 @@
 
 class FileManager {
 public:
-	FileManager(std::fstream& pFile);
+	FileManager(std::string pFileName);
 	~FileManager(void);
 
 	void makeNewStr(std::string s1, std::string s2);
-	static bool fileExist(const std::string& filename);
 	void replace(void);
 
 private:
-	std::fstream& _file;
+	std::string _fileName;
 	std::string _newStr;
 };
 
