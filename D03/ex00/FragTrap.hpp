@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+# define MELEE_ATK "melee"
+# define RANGE_ATK "range"
+# define NB_ATK 5
+
 class FragTrap {
 public:
 	FragTrap(void);
@@ -57,7 +61,7 @@ private:
 	int _meleeAttackDmg;
 	int _rangedAttackDmg;
 	int _armorReduction;
-	static const std::string _randAtk[];
+	static const std::string _randAtk[NB_ATK][2];
 };
 
 #endif

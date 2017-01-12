@@ -158,10 +158,11 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 	if (this->_energyPoint >= 25) {
 		this->setEnergyPoint(this->_energyPoint - 25);
 		srand(time(NULL));
-		int r = rand() % 5;
-		std::string randAtk = this->_randAtk[r];
-		std::cout << randAtk << std::endl;
-		if (r == 0 || r == 1 || r == 2)
+		int r = rand() % NB_ATK;
+		std::string nameAtk = this->_randAtk[r][0];
+		std::string typeAtk = this->_randAtk[r][1];
+		std::cout << nameAtk << std::endl;
+		if (typeAtk == RANGE_ATK)
 			this->rangedAttack(target);
 		else
 			this->meleeAttack(target);
@@ -169,10 +170,10 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 		std::cout << "Out of energy" << std::endl;
 }
 
-const std::string FragTrap::_randAtk[] = {
-	"Ratattattattatta! Powpowpowpow! Powpowpowpow! Pew-pew, pew-pew-pewpew!",
-	"Flesh fireworks!",
-	"Freezy peezy!",
-	"Grenaaaade!",
-	"Take that!",
+const std::string FragTrap::_randAtk[NB_ATK][2] = {
+	{"Ratattattattatta! Powpowpowpow! Powpowpowpow! Pew-pew, pew-pew-pewpew!", RANGE_ATK},
+	{"Flesh fireworks!", RANGE_ATK},
+	{"Freezy peezy!", MELEE_ATK},
+	{"Grenaaaade!", RANGE_ATK},
+	{"Take that!", MELEE_ATK},
 };
