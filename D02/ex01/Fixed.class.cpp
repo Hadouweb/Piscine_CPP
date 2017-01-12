@@ -2,23 +2,17 @@
 
 Fixed::Fixed(void) {
 	std::cout << "Default constructor called" << std::endl;
-	this->_fpv = 0;
+	this->_fixed = 0;
 }
 
 Fixed::Fixed(int const value) {
 	std::cout << "Int constructor called" << std::endl;
-	if (value)
-		;
-	this->_fpv = value * (1 << Fixed::_fract);
-	// Todo
+	this->_fixed = value * (1 << Fixed::_bits);
 }
 
 Fixed::Fixed(float const value) {
 	std::cout << "Float constructor called" << std::endl;
-	if (value)
-		;
-	this->_fpv = roundf(value * (1 << Fixed::_fract));
-	// Todo
+	this->_fixed = roundf(value * (1 << Fixed::_bits));
 }
 
 Fixed::Fixed(Fixed const &src) {
@@ -33,25 +27,24 @@ Fixed::~Fixed(void) {
 Fixed& Fixed::operator=(Fixed const &rhs) {
 	std::cout << "Assignation operator called" << std::endl;
 	if (this != &rhs)
-		this->_fpv = rhs.getRawBits();
+		this->_fixed = rhs.getRawBits();
 	return *this;
 }
 
 int Fixed::getRawBits() const {
-	return this->_fpv;
+	return this->_fixed;
 }
 
 void Fixed::setRawBits(int const raw) {
-	this->_fpv = raw;
+	this->_fixed = raw;
 }
 
 float Fixed::toFloat(void) const {
-	return (float)getRawBits() / (1 << Fixed::_fract);
+	return (float)getRawBits() / (1 << Fixed::_bits);
 }
 
 int Fixed::toInt(void) const {
-	// Todo
-	return getRawBits() / (1 << Fixed::_fract);
+	return getRawBits() / (1 << Fixed::_bits);
 }
 
 std::ostream & operator<<(std::ostream & o, Fixed const & f) {
@@ -59,4 +52,4 @@ std::ostream & operator<<(std::ostream & o, Fixed const & f) {
 	return o;
 }
 
-const int Fixed::_fract = 8;
+const int Fixed::_bits = 8;

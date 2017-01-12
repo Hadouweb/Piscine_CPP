@@ -21,8 +21,8 @@ public:
 	int toInt(void) const;
 
 private:
-	int _fpv;
-	static const int _fract;
+	int _fixed;
+	static const int _bits;
 };
 
 std::ostream & operator<<(std::ostream & o, Fixed const & f);

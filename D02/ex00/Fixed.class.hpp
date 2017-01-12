@@ -15,8 +15,8 @@ public:
 	void setRawBits(int const raw);
 
 private:
-	int _fpv;
-	static const int _fract;
+	int _fixed;
+	static const int _bits;
 };
 
 #endif
