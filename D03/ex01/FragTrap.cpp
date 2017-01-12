@@ -30,7 +30,7 @@ FragTrap::FragTrap(FragTrap const &src) {
 }
 
 FragTrap::~FragTrap(void) {
-
+	std::cout << "Are you god? Am I dead? (Destructor)" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(FragTrap const &rhs) {

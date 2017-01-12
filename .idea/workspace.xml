@@ -13,11 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eede836-1c21-4245-a5d5-ed29816c8ef9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D03/ex00/a.out" afterPath="$PROJECT_DIR$/D03/ex00/a.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D03/ex00/FragTrap.cpp" afterPath="$PROJECT_DIR$/D03/ex00/FragTrap.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D03/ex00/FragTrap.hpp" afterPath="$PROJECT_DIR$/D03/ex00/FragTrap.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D03/ex00/main.cpp" afterPath="$PROJECT_DIR$/D03/ex00/main.cpp" />
     </list>
     <ignored path="Piscine_CPP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,32 +35,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FragTrap.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/D03/ex00/FragTrap.cpp">
+      <file leaf-file-name="ScavTrap.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/D03/ex01/ScavTrap.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+            <state relative-caret-position="144">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragTrap.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/D03/ex00/FragTrap.hpp">
+      <file leaf-file-name="ScavTrap.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/D03/ex01/ScavTrap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state relative-caret-position="528">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/D03/ex00/main.cpp">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/D03/ex01/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="368">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,9 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/D01/ex00/main.cpp" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/D01/ex01/ex01.cpp" />
         <option value="$PROJECT_DIR$/D01/ex02/Zombie.hpp" />
         <option value="$PROJECT_DIR$/D01/ex02/ZombieEvent.hpp" />
         <option value="$PROJECT_DIR$/D01/ex02/main.cpp" />
@@ -129,13 +126,16 @@
         <option value="$PROJECT_DIR$/D02/ex02/Fixed.class.hpp" />
         <option value="$PROJECT_DIR$/D02/ex02/Fixed.class.cpp" />
         <option value="$PROJECT_DIR$/D03/ex01/FragTrap.hpp" />
-        <option value="$PROJECT_DIR$/D03/ex01/FragTrap.cpp" />
         <option value="$PROJECT_DIR$/D03/ex00/FragTrap.h" />
         <option value="$PROJECT_DIR$/D03/ex00/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/D03/ex00/main.cpp" />
         <option value="$PROJECT_DIR$/D03/ex00/FragTrap.hpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/D03/ex01/ScavTrap.hpp" />
+        <option value="$PROJECT_DIR$/D03/ex01/FragTrap.cpp" />
         <option value="$PROJECT_DIR$/D03/ex00/FragTrap.cpp" />
+        <option value="$PROJECT_DIR$/D03/ex01/ScavTrap.cpp" />
+        <option value="$PROJECT_DIR$/D03/ex01/main.cpp" />
       </list>
     </option>
   </component>
@@ -270,6 +270,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Piscine_CPP" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Piscine_CPP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="D03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -283,15 +297,15 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/D02/ex00" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/D03/ex01" />
       <recent name="$PROJECT_DIR$/D03/ex00" />
       <recent name="$PROJECT_DIR$/D02/ex02" />
       <recent name="$PROJECT_DIR$/D02/ex01" />
       <recent name="$PROJECT_DIR$/D02" />
-      <recent name="$PROJECT_DIR$/D01/ex07" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/D02/ex00" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Build All">
@@ -485,18 +499,18 @@
       <option name="presentableId" value="Default" />
       <updated>1484192578042</updated>
       <workItem from="1484192579594" duration="3472000" />
-      <workItem from="1484204459482" duration="3854000" />
+      <workItem from="1484204459482" duration="5404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7326000" />
+    <option name="totallyTimeSpent" value="8876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1683876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1683876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -555,14 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/D01/ex02/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/D01/ex03/ex04.cpp" />
     <entry file="file://$PROJECT_DIR$/D01/ex02/ZombieEvent.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -815,8 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/D03/ex01/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/D03/ex01/FragTrap.cpp" />
     <entry file="file://$PROJECT_DIR$/D03/ex01/FragTrap.hpp" />
     <entry file="file://$PROJECT_DIR$/D02/ex00/Fixed.class.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -834,14 +838,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/D03/ex00/FragTrap.h" />
     <entry file="file://$PROJECT_DIR$/D03/ex00/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/D01/ex03/Zombie.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -866,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/D03/ex00/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/D03/ex00/FragTrap.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
@@ -882,11 +870,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/D03/ex00/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/D03/ex00/FragTrap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        <state relative-caret-position="350">
+          <caret line="104" column="58" selection-start-line="104" selection-start-column="58" selection-end-line="104" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/D03/ex01/FragTrap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/D03/ex01/ScavTrap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/D03/ex01/ScavTrap.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/D03/ex01/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
