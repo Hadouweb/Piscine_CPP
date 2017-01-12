@@ -162,7 +162,7 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 		std::string nameAtk = this->_randAtk[r][0];
 		std::string typeAtk = this->_randAtk[r][1];
 		std::cout << nameAtk << std::endl;
-		if (typeAtk == RANGE_ATK)
+		if (typeAtk == RANGED_ATK)
 			this->rangedAttack(target);
 		else
 			this->meleeAttack(target);
@@ -171,9 +171,9 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target) {
 }
 
 const std::string FragTrap::_randAtk[NB_ATK][2] = {
-	{"Ratattattattatta! Powpowpowpow! Powpowpowpow! Pew-pew, pew-pew-pewpew!", RANGE_ATK},
-	{"Flesh fireworks!", RANGE_ATK},
+	{"Ratattattattatta! Powpowpowpow! Powpowpowpow! Pew-pew, pew-pew-pewpew!", RANGED_ATK},
+	{"Flesh fireworks!", RANGED_ATK},
 	{"Freezy peezy!", MELEE_ATK},
-	{"Grenaaaade!", RANGE_ATK},
+	{"Grenaaaade!", RANGED_ATK},
 	{"Take that!", MELEE_ATK},
 };

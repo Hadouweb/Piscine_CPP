@@ -4,7 +4,7 @@
 #include <iostream>
 
 # define MELEE_ATK "melee"
-# define RANGE_ATK "range"
+# define RANGED_ATK "ranged"
 # define NB_ATK 5
 
 class FragTrap {
