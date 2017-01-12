@@ -11,13 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eede836-1c21-4245-a5d5-ed29816c8ef9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/D02/ex01/a.out" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D02/ex00/Fixed.class.hpp" afterPath="$PROJECT_DIR$/D02/ex00/Fixed.class.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D02/ex01/Fixed.class.cpp" afterPath="$PROJECT_DIR$/D02/ex01/Fixed.class.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/D02/ex01/Fixed.class.hpp" afterPath="$PROJECT_DIR$/D02/ex01/Fixed.class.hpp" />
-    </list>
+    <list default="true" id="8eede836-1c21-4245-a5d5-ed29816c8ef9" name="Default" comment="" />
     <ignored path="Piscine_CPP.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +45,8 @@
           <file leaf-file-name="Fixed.class.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/D02/ex02/Fixed.class.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="892">
-                  <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
+                <state relative-caret-position="820">
+                  <caret line="127" column="39" lean-forward="true" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -863,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/D02/ex02/Fixed.class.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
+        <state relative-caret-position="820">
+          <caret line="127" column="39" lean-forward="true" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
           <folding />
         </state>
       </provider>
