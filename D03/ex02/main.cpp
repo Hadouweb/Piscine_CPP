@@ -4,14 +4,14 @@
 
 int		main(void)
 {
+	srand(time(NULL));
+
 	FragTrap akali("Akali");
 	FragTrap katarina("Katarina");
 	FragTrap soraka("Soraka");
 
 	ScavTrap maokai("Maokai");
 	ScavTrap janna("Janna");
-
-	ClapTrap mainAdc("Vayne");
 
 	akali.vaulthunter_dot_exe(katarina.getName());
 	katarina.vaulthunter_dot_exe(akali.getName());
@@ -24,8 +24,6 @@ int		main(void)
 	akali.vaulthunter_dot_exe(katarina.getName());
 	maokai.challengeNewcomer(janna.getName());
 	maokai.takeDamage(10);
-	mainAdc.takeDamage(50);
-	mainAdc.rangedAttack(maokai.getName());
 
 	return 0;
 }

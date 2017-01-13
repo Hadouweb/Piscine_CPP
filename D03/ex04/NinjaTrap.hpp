@@ -11,7 +11,7 @@
 # define NINJA_TRAP "NinjaTrap"
 
 
-class NinjaTrap : public ClapTrap {
+class NinjaTrap : public virtual ClapTrap {
 public:
     NinjaTrap(void);
 	NinjaTrap(std::string pName);

@@ -1,6 +1,6 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap(std::string pName) : ClapTrap(pName) {
+NinjaTrap::NinjaTrap(std::string pName) : ClapTrap(pName, 60, 60, 120, 120, 1, 60, 5, 0) {
 	std::cout << "I'm a robot ninja... (Constructor NinjaTrap)" << std::endl;
 	this->_hitPoint = 60;
 	this->_maxHitPoint = 60;
@@ -14,14 +14,6 @@ NinjaTrap::NinjaTrap(std::string pName) : ClapTrap(pName) {
 
 NinjaTrap::NinjaTrap(void) : ClapTrap()  {
 	std::cout << "I'm a robot ninja... (Constructor Default NinjaTrap)" << std::endl;
-	this->_hitPoint = 60;
-	this->_maxHitPoint = 60;
-	this->_energyPoint = 120;
-	this->_maxEnergyPoint = 120;
-	this->_level = 1;
-	this->_meleeAttackDmg = 60;
-	this->_rangedAttackDmg = 5;
-	this->_armorReduction = 0;
 }
 
 NinjaTrap::NinjaTrap(NinjaTrap const &src) : ClapTrap(src) {

@@ -8,7 +8,7 @@
 # define RANGED_ATK "ranged"
 # define NB_ATK 5
 
-class FragTrap : public ClapTrap {
+class FragTrap : public virtual ClapTrap {
 public:
 	FragTrap(void);
 	FragTrap(std::string pName);

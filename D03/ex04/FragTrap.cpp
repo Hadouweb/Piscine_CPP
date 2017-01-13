@@ -1,27 +1,11 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string pName) : ClapTrap(pName) {
+FragTrap::FragTrap(std::string pName) : ClapTrap(pName, 100, 100, 100, 100, 1, 30, 20, 5) {
 	std::cout << "Let's get this party started! (Constructor FragTrap)" << std::endl;
-	this->_hitPoint = 100;
-	this->_maxHitPoint = 100;
-	this->_energyPoint = 100;
-	this->_maxEnergyPoint = 100;
-	this->_level = 1;
-	this->_meleeAttackDmg = 30;
-	this->_rangedAttackDmg = 20;
-	this->_armorReduction = 5;
 }
 
 FragTrap::FragTrap(void) : ClapTrap() {
 	std::cout << "Let's get this party started! (Constructor Default FragTrap)" << std::endl;
-	this->_hitPoint = 100;
-	this->_maxHitPoint = 100;
-	this->_energyPoint = 100;
-	this->_maxEnergyPoint = 100;
-	this->_level = 1;
-	this->_meleeAttackDmg = 30;
-	this->_rangedAttackDmg = 20;
-	this->_armorReduction = 5;
 }
 
 FragTrap::FragTrap(FragTrap const &src) : ClapTrap(src) {

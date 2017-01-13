@@ -1,16 +1,46 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string pName) : _name(pName) {
-	std::cout << "Booting sequence complete. Hello! I am your new steward bot. Designation: CL4P-TP, Hyperion (Constructor ClapTrap)" << std::endl;
-}
-
-ClapTrap::ClapTrap(void) : _name("Unknown") {
+ClapTrap::ClapTrap(void) :
+		_name("Unknown"),
+		_hitPoint(0),
+		_maxHitPoint(0),
+		_energyPoint(0),
+		_maxEnergyPoint(0),
+		_level(0),
+		_meleeAttackDmg(0),
+		_rangedAttackDmg(0),
+		_armorReduction(0) {
 	std::cout << "Booting sequence complete. Hello! I am your new steward bot. Designation: CL4P-TP, Hyperion (Constructor Default ClapTrap)" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src) {
 	std::cout << "Booting sequence complete. Hello! I am your new steward bot. Designation: CL4P-TP, Hyperion (Constructor Assignation ClapTrap)" << std::endl;
 	*this = src;
+}
+
+ClapTrap::ClapTrap(
+	std::string pName,
+	int pHitPoints,
+	int pMaxHitPoint,
+	int pEnergyPoint,
+	int pMaxEnergyPoint,
+	int pLevel,
+	int pMeleeAttackDmg,
+	int pRangedAttackDmg,
+	int pArmorReduction
+	) :
+		_name(pName),
+		_hitPoint(pHitPoints),
+		_maxHitPoint(pMaxHitPoint),
+		_energyPoint(pEnergyPoint),
+		_maxEnergyPoint(pMaxEnergyPoint),
+		_level(pLevel),
+		_meleeAttackDmg(pMeleeAttackDmg),
+		_rangedAttackDmg(pRangedAttackDmg),
+		_armorReduction(pArmorReduction)
+{
+	std::cout << "Booting sequence complete. Hello! I am your new steward bot. Designation: CL4P-TP, Hyperion (Constructor ClapTrap)" << std::endl;
+	srand(time(0));
 }
 
 ClapTrap::~ClapTrap(void) {

@@ -14,8 +14,6 @@ int		main(void)
 	ScavTrap maokai("Maokai");
 	ScavTrap janna("Janna");
 
-	ClapTrap mainAdc("Vayne");
-
 	NinjaTrap shen("Shen");
 
 	shen.ninjaShoebox(katarina);
@@ -32,8 +30,6 @@ int		main(void)
 	akali.vaulthunter_dot_exe(katarina.getName());
 	maokai.challengeNewcomer(janna.getName());
 	maokai.takeDamage(10);
-	mainAdc.takeDamage(50);
-	mainAdc.rangedAttack(maokai.getName());
 
 	return 0;
 }

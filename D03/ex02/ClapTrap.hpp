@@ -6,9 +6,19 @@
 class ClapTrap {
 public:
     ClapTrap(void);
-	ClapTrap(std::string pName);
     ClapTrap(ClapTrap const & src);
-    ~ClapTrap(void);
+	ClapTrap(
+		std::string pName,
+		int pHitPoint,
+		int pMaxHitPoint,
+		int pEnergyPoint,
+		int pMaxEnergyPoint,
+		int pLevel,
+		int pMeleeAttackDmg,
+		int pRangedAttackDmg,
+		int pArmorReduction
+	);
+	~ClapTrap(void);
 
     ClapTrap & operator=(ClapTrap const & rhs);
 
@@ -20,12 +30,12 @@ public:
 	const std::string &getName() const;
 
 protected:
+	std::string _name;
 	int _hitPoint;
 	int _maxHitPoint;
 	int _energyPoint;
 	int _maxEnergyPoint;
 	int _level;
-	std::string _name;
 	int _meleeAttackDmg;
 	int _rangedAttackDmg;
 	int _armorReduction;

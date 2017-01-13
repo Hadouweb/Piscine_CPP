@@ -1,27 +1,11 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string pName) : ClapTrap(pName) {
+ScavTrap::ScavTrap(std::string pName) : ClapTrap(pName, 100, 100, 50, 50, 1, 20, 15, 3) {
 	std::cout << "This time it'll be awesome, I promise! (Constructor ScavTrap)" << std::endl;
-	this->_hitPoint = 100;
-	this->_maxHitPoint = 100;
-	this->_energyPoint = 50;
-	this->_maxEnergyPoint = 50;
-	this->_level = 1;
-	this->_meleeAttackDmg = 20;
-	this->_rangedAttackDmg = 15;
-	this->_armorReduction = 3;
 }
 
 ScavTrap::ScavTrap(void) : ClapTrap() {
 	std::cout << "This time it'll be awesome, I promise! (Constructor Default ScavTrap)" << std::endl;
-	this->_hitPoint = 100;
-	this->_maxHitPoint = 100;
-	this->_energyPoint = 50;
-	this->_maxEnergyPoint = 50;
-	this->_level = 1;
-	this->_meleeAttackDmg = 20;
-	this->_rangedAttackDmg = 15;
-	this->_armorReduction = 3;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &src) : ClapTrap(src) {
@@ -53,10 +37,9 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
 void ScavTrap::challengeNewcomer(std::string const &target) {
 	if (this->_energyPoint >= 25) {
 		this->setEnergyPoint(this->_energyPoint - 25);
-		srand(time(NULL));
 		int r = rand() % NB_CHAL;
 		std::string nameChal = this->_randChal[r];
-		std::cout << "FR4G-TP <" << this->_name << ">" << " Hey " << target << ", " << nameChal << std::endl;
+		std::cout << "FR4G-TP <" << this->_name << "> " << " Hey " << target << ", " << nameChal << std::endl;
 	} else
 		std::cout << "FR4G-TP <" << this->_name << "> is out of energy" << std::endl;
 }
