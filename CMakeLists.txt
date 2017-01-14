@@ -26,6 +26,15 @@ set(SOURCE_FILES
 	D04/ex01/RadScorpion.cpp
 	D04/ex01/SuperMutant.cpp
 	D04/ex01/main.cpp
+	D04/ex02/AssaultTerminator.cpp
+	D04/ex02/AssaultTerminator.hpp
+	D04/ex02/ISpaceMarine.hpp
+	D04/ex02/ISquad.hpp
+	D04/ex02/main.cpp
+	D04/ex02/Squad.cpp
+	D04/ex02/Squad.hpp
+	D04/ex02/TacticalMarine.cpp
+	D04/ex02/TacticalMarine.hpp
         )
 
 add_executable(foo ${SOURCE_FILES})
