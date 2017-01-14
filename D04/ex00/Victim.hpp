@@ -7,7 +7,7 @@ class Victim {
 public:
 	Victim(Victim const & src);
 	Victim(std::string pName);
-	~Victim(void);
+	virtual ~Victim(void);
 	Victim & operator=(Victim const & rhs);
 
 	const std::string &getName(void) const;
