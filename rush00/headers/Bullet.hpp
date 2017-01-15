@@ -19,6 +19,7 @@ public:
 	void setPosY(int y);
 	void setPosX(int x);
 
+
 private:
 	Bullet(void);
 	NcurseManager *_render;

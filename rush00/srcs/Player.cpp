@@ -16,8 +16,7 @@ Player::Player(Player const &src) {
 }
 
 Player::~Player(void) {
-	if (this->_nbBullet > 0)
-		delete [] this->_bulletArray;
+	delete [] this->_bulletArray;
 	// Todo
 }
 
@@ -37,12 +36,12 @@ void Player::_updateBulletArray(void) {
 	for (int i = 0; i < nbBullet; i++) {
 		if (this->_bulletArray[i]->getPosX() + 1 == this->_render->getScreenWidth()) {
 			this->_render->setCell(this->_bulletArray[i]->getPosY(), this->_bulletArray[i]->getPosX(), ' ');
-			delete this->_bulletArray[i];
 		} else {
 			newBulletArray[j] = this->_bulletArray[i];
 			j++;
 		}
 	}
+
 	this->_bulletArray = newBulletArray;
 	this->_nbBullet = j;
 }
@@ -110,4 +109,28 @@ void Player::moveRight(void) {
 void Player::moveX(int value) {
 	if (value)
 		;
+}
+
+void Player::bulletDie(Bullet **bulletArrayDie, int nb) {
+	int nbBullet = this->getNbBullet();
+	Bullet **newBulletArray = new Bullet*[1000];
+	int k = 0;
+
+	for (int i = 0; i < nb; i++) {
+		int y1 = bulletArrayDie[i]->getPosY();
+		int x1 = bulletArrayDie[i]->getPosX();
+		for (int j = 0; j < nbBullet; j++) {
+			int y2 = this->_bulletArray[j]->getPosY();
+			int x2 = this->_bulletArray[j]->getPosX();
+			if (y1 == y2 && x1 == x2) {
+				this->_render->setCell(bulletArrayDie[i]->getPosY(), bulletArrayDie[i]->getPosX(), ' ');
+			} else {
+				newBulletArray[k] = this->_bulletArray[j];
+				k++;
+			}
+		}
+	}
+
+	this->_bulletArray = newBulletArray;
+	this->_nbBullet = k;
 }

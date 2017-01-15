@@ -27,13 +27,16 @@ public:
 	static bool haveEvent(void);
 	void setTermSize(void);
 	int getScreenHeight(void) const;
+	int getScreenHeightMin(void) const;
 	int getScreenWidth(void) const;
 	int getCursorX(void) const;
 	int getCursorY(void) const;
 	bool setCursorX(int x);
 	bool setCursorY(int y);
-	void draw(void) const;
+	void draw(int score) const;
 	bool setCell(int y, int x, char c);
+	bool isResized(void) const;
+	char **getMap(void) const;
 
 private:
 	void _initMap(void);

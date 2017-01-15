@@ -25,6 +25,7 @@ public:
 	int getNbBullet(void) const;
 	void moveX(int value);
 	void shoot(void);
+	void bulletDie(Bullet **bulletArrayDie, int nb);
 
 private:
 	Player(void);

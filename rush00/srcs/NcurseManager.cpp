@@ -4,13 +4,22 @@ NcurseManager::NcurseManager(void) {
 	initscr();
 	this->setTermSize();
 	this->_initMap();
-	this->draw();
+	this->draw(0);
 	noecho();
 	nodelay(stdscr,TRUE);
 	curs_set(0);
-	// Todo context
-	//this->initStartMenu();
-	//printWindow(this->getStartMenu(), ACS_VLINE, ACS_HLINE);
+}
+
+bool NcurseManager::isResized(void) const {
+	struct winsize w;
+	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+	if (w.ws_row != this->_maxHeight || w.ws_col != this->_maxWidth)
+		return TRUE;
+	return FALSE;
+}
+
+char **NcurseManager::getMap(void) const {
+	return this->_map;
 }
 
 bool NcurseManager::setCell(int y, int x, char c) {
@@ -29,7 +38,7 @@ void NcurseManager::_setBorder(void) {
 	int width = this->getScreenWidth();
 
 	for (int x = 0; x < width; x++) {
-		this->_map[0][x] = '*';
+		this->_map[5][x] = '*';
 		this->_map[height - 1][x] = '*';
 	}
 }
@@ -50,7 +59,7 @@ void NcurseManager::_initMap(void) {
 	this->_setBorder();
 }
 
-void NcurseManager::draw(void) const {
+void NcurseManager::draw(int score) const {
 	int height = this->getScreenHeight();
 	int width = this->getScreenWidth();
 
@@ -59,6 +68,7 @@ void NcurseManager::draw(void) const {
 			mvaddch(y, x, this->_map[y][x]);
 		}
 	}
+	mvprintw(3, this->getScreenWidth() / 2 - 4 ,"SCORE: %d", score);
 	refresh();
 }
 
@@ -102,7 +112,11 @@ void NcurseManager::setTermSize(void) {
 }
 
 int NcurseManager::getScreenHeight(void) const {
-	return this->_maxHeight;
+	return this->_maxHeight - 5;
+}
+
+int NcurseManager::getScreenHeightMin(void) const {
+	return 5;
 }
 
 int NcurseManager::getScreenWidth(void) const {
@@ -122,7 +136,8 @@ bool NcurseManager::setCursorX(int x) {
 
 bool NcurseManager::setCursorY(int y) {
 	int height = this->getScreenHeight();
-	if (y > 0 && y < height - 1) {
+	int minHeight = this->getScreenHeightMin();
+	if (y > minHeight && y < height - 1) {
 		this->setCell(this->_cursorY, this->_cursorX, ' ');
 		this->_cursorY = y;
 		this->setCell(this->_cursorY, this->_cursorX, '>');

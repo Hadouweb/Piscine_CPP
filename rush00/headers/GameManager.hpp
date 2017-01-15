@@ -13,14 +13,18 @@ public:
     GameManager & operator=(GameManager const & rhs);
 
 	int getNbEntity(void) const;
-	IEntity **getEntityArray(void);
+	Enemy **getEntityArray(void);
+	void generateWave(void);
+	void enemyDie(Enemy **EnemyArrayDie, int nb);
 
 private:
 	GameManager(void);
-	void _generateWave(void);
-	IEntity **_entityArray;
+	void _updateEnemyArray(void);
+	Enemy **_entityArray;
 	NcurseManager *_render;
 	int _nbEntity;
+	int _tokenSpawner;
+	int _tokenDifficult;
 };
 
 #endif

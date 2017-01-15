@@ -1,4 +1,4 @@
-CC = -Wall -Wextra -Werror
+CC = -Wall -Wextra -Werror -g
 
 NAME = ft_retro
 SRC_PATH = ./srcs

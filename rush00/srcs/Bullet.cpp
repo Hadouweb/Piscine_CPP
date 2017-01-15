@@ -50,3 +50,5 @@ void Bullet::moveX(int value) {
 		this->setPosX(this->getPosX() + value);
 	}
 }
+
+
