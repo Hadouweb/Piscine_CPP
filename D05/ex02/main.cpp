@@ -9,7 +9,7 @@
 int		main(void)
 {
 	srand(time(NULL));
-	
+
 	Bureaucrat akali("Akali", 1);
 	Bureaucrat ryze("Ryze", 22);
 	Bureaucrat fiora("Fiora", 2);
