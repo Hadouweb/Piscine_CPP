@@ -20,6 +20,9 @@ set(SOURCE_FILES
 	rush00/srcs/Player.cpp
 	rush00/srcs/Enemy.cpp
 	rush00/srcs/main.cpp
+        D05/ex00/Bureaucrat.cpp
+        D05/ex00/Bureaucrat.hpp
+        D05/ex00/main.cpp
         )
 
 add_executable(foo ${SOURCE_FILES})
