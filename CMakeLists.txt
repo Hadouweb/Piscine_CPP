@@ -20,11 +20,17 @@ set(SOURCE_FILES
         rush00/srcs/Player.cpp
         rush00/srcs/Enemy.cpp
         rush00/srcs/main.cpp
-        D05/ex01/Bureaucrat.cpp
-        D05/ex01/Bureaucrat.hpp
-        D05/ex01/Form.hpp
-        D05/ex01/Form.cpp
-        D05/ex01/main.cpp
+        D05/ex02/Bureaucrat.cpp
+        D05/ex02/Bureaucrat.hpp
+        D05/ex02/Form.hpp
+        D05/ex02/Form.cpp
+        D05/ex02/main.cpp
+        D05/ex02/PresidentialPardonForm.cpp
+        D05/ex02/PresidentialPardonForm.hpp
+        D05/ex02/RobotomyRequestForm.cpp
+        D05/ex02/RobotomyRequestForm.hpp
+        D05/ex02/ShrubberyCreationForm.hpp
+        D05/ex02/ShrubberyCreationForm.cpp
         )
 
 add_executable(foo ${SOURCE_FILES})
