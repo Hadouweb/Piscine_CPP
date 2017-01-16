@@ -5,7 +5,7 @@ Bureaucrat::Bureaucrat(void) : _name("Unknown"), _grade(150) {
 }
 
 Bureaucrat::Bureaucrat(std::string pName, int pNote)
-		: _name(pName), _grade(pNote) {
+	: _name(pName), _grade(pNote) {
 	if (this->_grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else if (this->_grade < 1)
@@ -111,4 +111,14 @@ const char *Bureaucrat::GradeTooLowException::what() const throw() {
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &b) {
 	os << "<" << b.getName() << ">, bureaucrat grade <" << b.getGrade() << ">";
 	return os;
+}
+
+void Bureaucrat::signForm(Form & f) const {
+	try {
+		f.beSigned((Bureaucrat&)*this);
+	} catch (std::exception & e) {
+		std::cout << "<" << this->getName() << "> " << "cannot sign <" << f.getName() << "> because " << e.what() << std::endl;
+		return ;
+	}
+	std::cout << "<" << this->getName() << "> " << "signs <" << f.getName() << ">" << std::endl;
 }

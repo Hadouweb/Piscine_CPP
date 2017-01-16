@@ -4,6 +4,18 @@
 int 	main(void) {
 
 	try {
+		Bureaucrat superMan("SuperMan", 0);
+	} catch (std::exception & e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		Bureaucrat superMan("SuperMan", 151);
+	} catch (std::exception & e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
 		Bureaucrat jhon("Jhon", 2);
 		std::cout << jhon << std::endl;
 		jhon++;
@@ -32,8 +44,11 @@ int 	main(void) {
 		std::cout << akali << std::endl;
 		std::cout << katarina << std::endl;
 
+		std::cout << akali++ << std::endl;
 		std::cout << ++katarina << std::endl;
+		std::cout << akali++ << std::endl;
 		std::cout << ++katarina << std::endl;
+		std::cout << akali++ << std::endl;
 		std::cout << ++katarina << std::endl;
 	} catch (std::exception & e) {
 		std::cout << e.what() << std::endl;
