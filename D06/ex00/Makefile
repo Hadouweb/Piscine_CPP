@@ -1,9 +1,8 @@
 CC = -Wall -Wextra -Werror
 
-NAME = scalar
+NAME = convert
 
 SRC =   main.cpp\
-        Convert.cpp\
 
 OBJ = $(SRC:%.cpp=%.o)
 
