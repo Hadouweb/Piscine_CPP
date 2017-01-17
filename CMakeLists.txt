@@ -33,6 +33,9 @@ set(SOURCE_FILES
         D05/ex03/RobotomyRequestForm.hpp
         D05/ex03/ShrubberyCreationForm.hpp
         D05/ex03/ShrubberyCreationForm.cpp
+        D06/ex00/main.cpp
+        D06/ex00/Convert.hpp
+        D06/ex00/Convert.cpp
         )
 
 add_executable(foo ${SOURCE_FILES})
