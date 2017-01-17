@@ -1,7 +1,4 @@
 #include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <ctgmath>
 
 int 	main(int ac, char **av) {
 	if (ac == 2) {
