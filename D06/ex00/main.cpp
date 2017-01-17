@@ -5,9 +5,7 @@
 
 int 	main(int ac, char **av) {
 	if (ac == 2) {
-		double base = std::atof(av[1]);
-
-		double doubleValue = base;
+		double doubleValue = std::atof(av[1]);
 		float floatValue = static_cast<float>(doubleValue);
 		int intValue = static_cast<int>(doubleValue);
 		char charValue = static_cast<char>(doubleValue);
