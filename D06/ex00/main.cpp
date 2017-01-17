@@ -5,7 +5,9 @@
 
 int 	main(int ac, char **av) {
 	if (ac == 2) {
-		double doubleValue = static_cast<double>(std::atof(av[1]));
+		double base = std::atof(av[1]);
+
+		double doubleValue = base;
 		float floatValue = static_cast<float>(doubleValue);
 		int intValue = static_cast<int>(doubleValue);
 		char charValue = static_cast<char>(doubleValue);
@@ -23,8 +25,16 @@ int 	main(int ac, char **av) {
 			std::cout << "int: " << "impossible" << std::endl;
 
 		std::cout.precision(1);
-		std::cout << "float: " << std::fixed << floatValue << 'f' << std::endl;
-		std::cout << "double: " << std::fixed << doubleValue << std::endl;
+
+		if (doubleValue <= std::numeric_limits<float>::max() && doubleValue >= -std::numeric_limits<float>::max())
+			std::cout << "float: " << std::fixed << floatValue << 'f' << std::endl;
+		else
+			std::cout << "float: " << "impossible" << std::endl;
+
+		if (doubleValue <= std::numeric_limits<double>::max() && doubleValue >= -std::numeric_limits<double>::max())
+			std::cout << "double: " << std::fixed << doubleValue << 'f' << std::endl;
+		else
+			std::cout << "double: " << "impossible" << std::endl;
 	} else {
 		std::cout << "Usage: parameter 1 (char, int, float, double)" << std::endl;
 	}
