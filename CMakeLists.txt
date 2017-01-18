@@ -41,6 +41,7 @@ set(SOURCE_FILES
         D06/ex02/A.hpp
         D06/ex02/B.hpp
         D06/ex02/C.hpp
+        D07/ex00/main.cpp
         )
 
 add_executable(foo ${SOURCE_FILES})
