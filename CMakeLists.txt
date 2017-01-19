@@ -47,6 +47,9 @@ set(SOURCE_FILES
 		D07/ex02/Array.hpp
 		D08/ex00/easyfind.hpp
 		D08/ex00/main.cpp
+		D08/ex01/main.cpp
+		D08/ex01/span.cpp
+		D08/ex01/span.hpp
         )
 
 add_executable(foo ${SOURCE_FILES})
