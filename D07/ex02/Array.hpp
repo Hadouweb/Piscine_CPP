@@ -7,7 +7,7 @@ template<typename T>
 class Array {
 public:
     Array<T>(void) {
-		this->_data = NULL;
+		this->_data = new T[0];
 		this->_len = 0;
     };
     Array<T>(unsigned int n) {
@@ -16,8 +16,6 @@ public:
     }
 
     Array<T>(Array<T> const & src) {
-		this->_data = NULL;
-		this->_len = 0;
 		*this = src;
     };
 

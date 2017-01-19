@@ -1,8 +1,8 @@
 CC = -Wall -Wextra -Werror
 
-NAME = ex00
+NAME = whatever
 
-SRC =   main.cpp\
+SRC =  whatever.cpp\
 
 OBJ = $(SRC:%.cpp=%.o)
 
