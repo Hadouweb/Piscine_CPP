@@ -1,28 +1,60 @@
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
+#include <iostream>
+
 template<typename T>
 class Array {
 public:
-    Array(void) {
-		this->_data = new T;
+    Array<T>(void) {
+		this->_data = NULL;
+		this->_len = 0;
     };
-    Array(unsigned int n) {
-    	this->_data = new T[n];
+    Array<T>(unsigned int n) {
+    	this->_data = new T[n]();
+    	this->_len = n;
     }
 
-    Array(Array const & src);
+    Array<T>(Array<T> const & src) {
+		this->_data = NULL;
+		this->_len = 0;
+		*this = src;
+    };
 
-    ~Array(void) { }
+    ~Array<T>(void) {
+    	if (this->_data) {
+    		delete [] this->_data;
+    	}
+    }
 
-    Array & operator=(Array const & rhs);
+    Array<T> & operator=(Array const & rhs) {
+		if (this != &rhs) {
+			this->_len = rhs.getLen();
+			if (this->_data)
+				delete [] this->_data;
+			this->_data = new T[this->_len];
+			unsigned int i;
+			for (i = 0; i < this->_len; i++) {
+				this->_data[i] = rhs._data[i];
+			}
+		}
+		return *this;
+    };
 
-	int getSize(void) const {
-		return sizeof(this->_data) / sizeof(T);
+    T & operator[](unsigned int n) const {
+    	if (n >= this->getLen() || n < 0) {
+			throw std::out_of_range("Index out of limit");
+		} else
+			return this->_data[n];
+    }
+
+	unsigned int getLen(void) const {
+		return this->_len;
 	};
 
 private:
 	T *_data;
+	unsigned int _len;
 };
 
 #endif
