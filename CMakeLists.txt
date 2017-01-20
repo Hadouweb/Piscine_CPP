@@ -50,6 +50,9 @@ set(SOURCE_FILES
 		D08/ex01/main.cpp
 		D08/ex01/span.cpp
 		D08/ex01/span.hpp
+		D08/ex02/main.cpp
+		D08/ex02/mutantstack.hpp
+		D08/ex02/mutantstack.cpp
         )
 
 add_executable(foo ${SOURCE_FILES})
