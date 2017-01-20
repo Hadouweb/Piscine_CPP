@@ -25,6 +25,8 @@ Span::Span(unsigned int pMaxLen) : _maxLen(pMaxLen) {
 
 }
 
+
+
 unsigned int Span::getLen(void) const {
 	return this->_maxLen;
 }
@@ -38,8 +40,11 @@ void Span::addNumber(int n) {
 }
 
 int Span::shortestSpan(void) const {
-	return (*std::max_element(this->_data.begin(), this->_data.end()) -
-			*std::min_element(this->_data.begin(), this->_data.end()));
+	if (this->_data.size() > 1) {
+		return (*std::max_element(this->_data.begin(), this->_data.end()) -
+				*std::min_element(this->_data.begin(), this->_data.end()));
+	} else
+		throw Span::LongestSpanException();
 }
 
 int Span::longestSpan(void) const {
@@ -51,6 +56,43 @@ int Span::longestSpan(void) const {
 		tmp.clear();
 		return ret;
 	} else
-		throw std::exception("longestSpan not found.");
-	return -1;
+		throw Span::ShortestSpanException();
+}
+
+Span::ShortestSpanException::ShortestSpanException(void) { }
+
+Span::ShortestSpanException::~ShortestSpanException(void) throw() { }
+
+Span::ShortestSpanException::ShortestSpanException(
+		const Span::ShortestSpanException &src) {
+	*this = src;
+}
+
+Span::ShortestSpanException &
+Span::ShortestSpanException::operator=(const Span::ShortestSpanException &rhs) {
+	if (this != &rhs) { }
+	return *this;
+}
+
+const char *Span::ShortestSpanException::what() const throw() {
+	return "ShortestSpanException: not possible.";
+}
+
+Span::LongestSpanException::LongestSpanException(void) { }
+
+Span::LongestSpanException::~LongestSpanException(void) throw() { }
+
+Span::LongestSpanException::LongestSpanException(
+		const Span::LongestSpanException &src) {
+	*this = src;
+}
+
+Span::LongestSpanException &
+Span::LongestSpanException::operator=(const Span::LongestSpanException &rhs) {
+	if (this != &rhs) { }
+	return *this;
+}
+
+const char *Span::LongestSpanException::what() const throw() {
+	return "LongestSpanException: not possible.";
 }
