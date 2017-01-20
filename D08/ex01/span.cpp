@@ -32,10 +32,30 @@ unsigned int Span::getLen(void) const {
 }
 
 void Span::addNumber(int n) {
-	if (this->_data.size() == this->getLen())
+	if (this->_data.size() >= this->getLen())
 		throw std::out_of_range("out of limit.");
 	else {
 		this->_data.push_back(n);
+	}
+}
+
+void Span::addNumber(int nbElem, int value) {
+	for (int i = 0; i < nbElem; i++) {
+		try {
+			this->addNumber(value);
+		} catch (std::exception & e) {
+			std::cout << e.what() << std::endl;
+		}
+	}
+}
+
+void Span::addNumber(int nbElem, int (*f)(void)) {
+	for (int i = 0; i < nbElem; i++) {
+		try {
+			this->addNumber(f());
+		} catch (std::exception & e) {
+			std::cout << e.what() << std::endl;
+		}
 	}
 }
 

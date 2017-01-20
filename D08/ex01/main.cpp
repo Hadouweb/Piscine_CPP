@@ -66,12 +66,9 @@ int main()
 		std::cout << e.what() << std::endl;
 	}
 
-	Span sp3 = Span(10000);
+	Span sp3 = Span(100000);
 	srand(time(NULL));
-
-	for (unsigned int i = 0; i < sp3.getLen(); i++) {
-		sp3.addNumber(rand());
-	}
+	sp3.addNumber(sp3.getLen(), rand);
 
 	try {
 		std::cout << sp3.shortestSpan() << std::endl;

@@ -16,6 +16,8 @@ public:
     Span & operator=(Span const & rhs);
 
 	void addNumber(int n);
+	void addNumber(int nbElem, int value);
+	void addNumber(int nbElem, int (*f)(void));
 	unsigned int getLen(void) const;
 
 	int shortestSpan(void) const;
